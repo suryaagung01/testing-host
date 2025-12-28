@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surat Cinta untuk Pacar</title>
+    <style>
+        /* CSS untuk styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #ff9a9e, #fecfef); /* Gradien merah muda romantis */
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Agar animasi hati tidak keluar layar */
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #e91e63;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+        .heart {
+            position: absolute;
+            font-size: 2em;
+            color: #e91e63;
+            animation: fall 5s linear infinite;
+        }
+        @keyframes fall {
+            0% { top: -10px; opacity: 1; }
+            100% { top: 100vh; opacity: 0; }
+        }
+        button {
+            background: #e91e63;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background: #c2185b;
+        }
+        #message {
+            display: none;
+            margin-top: 20px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Surat Cinta untuk [JULIA RISKI]</h1>
+        <p>Hai sayang, aku ingin bilang bahwa kamu adalah cahaya dalam hidupku. Setiap hari bersamamu adalah petualangan yang indah. Aku mencintaimu lebih dari kata-kata bisa ungkapkan.</p>
+        <p>Klik tombol di bawah ini ya sayangku!</p>
+        <button onclick="showMessage()">Klik Aku</button>
+        <div id="message">
+            <p>Cintaku ke kamu nggak berisik, tapi konsisten. Nggak banyak janji, tapi selalu ada saat kamu butuh.. 💖</p>
+            <video controls src="Gambar/WhatsApp Video 2025-12-29 at 00.08.12.mp4" width="170"></video>
+        </div>
+    </div>
+
+    <!-- Animasi hati jatuh -->
+    <script>
+        // JavaScript untuk animasi hati
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + 'vw'; // Posisi acak horizontal
+            heart.style.animationDuration = Math.random() * 3 + 2 + 's'; // Durasi acak
+            document.body.appendChild(heart);
+
+            // Hapus hati setelah animasi selesai
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+
+        // Buat hati setiap 300ms
+        setInterval(createHeart, 300);
+
+        // Fungsi untuk menampilkan pesan
+        function showMessage() {
+            const message = document.getElementById('message');
+            message.style.display = message.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+
+    <!-- Opsional: Tambahkan musik latar (ganti URL dengan file audio Anda) -->
+    <!-- <audio autoplay loop>
+        <source src="path/to/your/romantic-song.mp3" type="audio/mpeg">
+    </audio> -->
+</body>
+</html>

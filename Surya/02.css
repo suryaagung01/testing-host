@@ -1,0 +1,62 @@
+/* CSS untuk styling halaman romantis */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #ff9a9e, #fecfef); /* Gradien merah muda romantis */
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Agar animasi hati tidak keluar layar */
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #e91e63;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.heart {
+    position: absolute;
+    font-size: 2em;
+    color: #e91e63;
+    animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+    0% { top: -10px; opacity: 1; }
+    100% { top: 100vh; opacity: 0; }
+}
+
+button {
+    background: #e91e63;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background: #c2185b;
+}
+
+#message {
+    display: none;
+    margin-top: 20px;
+    font-style: italic;
+}
